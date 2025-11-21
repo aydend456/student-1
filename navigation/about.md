@@ -115,4 +115,7 @@ Everything for me, as for many others, revolves around family and faith.
 Gallery of Pics, scroll to the right for more ...
 </comment>
 <div class="image-gallery">
+src="{{site.baseurl}}/images/about/tokyo tower.jpg
+src="{{site.baseurl}}/images/about/my mom and I.jpg
+src="{{site.baseurl}}/images/about/ayden.jpg
 </div>

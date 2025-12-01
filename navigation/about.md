@@ -6,8 +6,20 @@ comments: true
 ---
 
 ## As a conversation Starter
+Some Videogames I play:
+-Roblox
+-Fortnite
 
-Here are some places I have lived.
+Some Animes I Watch:
+-One piece
+-Solo Leveling
+-Dragon Ball
+-Jujutsu Kaisen
+
+My Two Favorite Quotes:
+"I can accept failure, everyone fails at something. But I can't accept not trying"- Micheal Jordan and "If you do the work, you get rewarded. There are no shortcuts in life."- Micheal Jordan
+
+## Here are some places I have lived.
 
 <comment>
 Flags are made using Wikipedia images
@@ -107,15 +119,15 @@ Here is what I did at those places
 
 Everything for me, as for many others, revolves around family and faith.
 
--I am super close with my family especially my mom.
--My family has definitely a big inspiration in my life and encourages me to better myself everyday.
--I love spending time with my family and go on vacations with them
+I am super close with my family especially my mom.
+My family has definitely a big inspiration in my life and encourages me to better myself everyday.
+I love spending time with my family and go on vacations with them.
 
 <comment>
-Gallery of Pics, scroll to the right for more ...
+Gallery of Pics:
 </comment>
 <div class="image-gallery">
-src="{{site.baseurl}}/images/about/tokyo tower.jpg
-src="{{site.baseurl}}/images/about/my mom and I.jpg
-src="{{site.baseurl}}/images/about/ayden.jpg
+<img src="images/about/tokyo-tower.jpg" alt="Image 1">
+<img src="images/about/my-mom-and-I.jpg" alt="Image 2">
+<img src="images/about/ayden.jpg" alt="Image 3">
 </div>

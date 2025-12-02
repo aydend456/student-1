@@ -127,7 +127,7 @@ I love spending time with my family and go on vacations with them.
 Gallery of Pics:
 </comment>
 <div class="image-gallery">
-<img src="images/about/tokyo-tower.jpg" alt="Image 1">
-<img src="images/about/my-mom-and-I.jpg" alt="Image 2">
-<img src="images/about/ayden.jpg" alt="Image 3">
+![tokyo-tower](images/tokyo-tower.jpg)
+![my-mom-and-I](images/my-mom-and-I.jpg)
+![ayden](images/ayden.jpg)
 </div>

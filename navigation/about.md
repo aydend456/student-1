@@ -46,6 +46,16 @@ Flags are made using Wikipedia images
         margin: 5px 0; /* Add some margin for spacing */
     }
 
+    /* Food image styling for the favorite foods grid */
+    .food-img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 4px;
+        display: block;
+        margin-bottom: 8px;
+    }
+
     .image-gallery {
         display: flex;
         flex-wrap: nowrap;
@@ -106,47 +116,61 @@ Flags are made using Wikipedia images
     }
 </script>
 
-### Here are my favorite foods
+## Here are my favorite foods
+
+<div class="grid-container" id="grid_food">
+    <!-- favorite food items will be added here by JavaScript -->
+</div>
+
 <script>
-// Clear the output
-const outputElement = document.getElementById('outputElement') || (function(){
-    const e = document.createElement('div');
-    e.id = 'outputElement';
-    document.body.appendChild(e);
-    return e;
+// Populate the Favorite Foods grid separately from the flags grid
+(function(){
+    const container = document.getElementById('grid_food');
+    if (!container) return; // nothing to do if placeholder missing
+
+    // Apply styles (grid layout is also defined in the top CSS, this reinforces it)
+    container.style.border = '2px dashed';
+    container.style.padding = '10px';
+    container.style.display = 'grid';
+    container.style.gridTemplateColumns = 'repeat(auto-fill, minmax(150px, 1fr))';
+    container.style.gap = '10px';
+
+    // Clear existing children to avoid duplicates when reloading
+    container.innerHTML = '';
+
+         // Example favorite foods with optional image paths (replace with your actual favorites and image files)
+         const foods = [
+             {name: 'Pizza', img: 'a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg'},
+             {name: 'Sushi', img: '1/1c/Colorful_sushi_lunch.jpg'},
+             {name: 'Burgers', img: 'f/ff/In-N-Out_Burger_cheeseburgers_and_fries.jpg'},
+             {name: 'Ice Cream', img: '6/6f/An_ice_cream_cone_at_a_Ben_%26_Jerry%27s_shop_in_Montreal.jpg'},
+             {name: 'Tacos', img: '7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg'},
+             {name: 'Ramen', img: '5/56/Soy_Milk_Ramen_and_Tonkotsu_Miso_Ramen_by_Goemon_Ramen_Bar.jpg'},
+         ];
+
+         foods.forEach(food => {
+                 const item = document.createElement('div');
+                 item.className = 'grid-item';
+                 item.style.padding = '12px';
+                 item.style.textAlign = 'center';
+                 item.style.borderRadius = '8px';
+                 item.style.border = '1px solid';
+
+                 // Image spot (if the file exists it will show; otherwise you'll see a broken image or can replace with a placeholder)
+                 const img = document.createElement('img');
+                 img.className = 'food-img';
+                 img.src = food.img;
+                 img.alt = food.name;
+                 item.appendChild(img);
+
+                 // Caption / name
+                 const caption = document.createElement('p');
+                 caption.textContent = food.name;
+                 item.appendChild(caption);
+
+                 container.appendChild(item);
+         });
 })();
-outputElement.innerHTML = '';
-
-// Create or reuse a div container with id 'grid_container'
-let container = document.getElementById('grid_container');
-if (!container) {
-    container = document.createElement('div');
-    container.id = 'grid_container';
-    container.className = 'grid-container';
-}
-
-// Apply the requested styles
-container.style.border = '2px dashed';
-container.style.padding = '10px';
-container.style.display = 'grid';
-container.style.gridTemplateColumns = 'repeat(auto-fill, minmax(150px, 1fr))';
-
-// Clear any existing children to avoid duplicate items
-container.innerHTML = '';
-
-// Add sample grid items
-for (let i = 1; i <= 8; i++) {
-  const item = document.createElement('div');
-  item.style.padding = '20px';
-  item.style.textAlign = 'center';
-  item.style.borderRadius = '8px';
-  item.style.border = '1px solid';
-  item.textContent = 'Grid Item ' + i;
-  container.appendChild(item);
-}
-
-// Append container to output
-outputElement.appendChild(container);
 </script>
 
 ### Journey through Life

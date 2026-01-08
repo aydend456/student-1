@@ -118,7 +118,7 @@ Flags are made using Wikipedia images
 
 ## Here are my favorite foods
 
-<div class="grid-container" id="grid_food">
+<div class="grid-container2" id="grid_food">
     <!-- favorite food items will be added here by JavaScript -->
 </div>
 
@@ -176,7 +176,7 @@ Flags are made using Wikipedia images
 
 <!-- Favorite TV Shows grid -->
 Favorite TV Shows
-<div class="grid-container" id="shows_grid">
+<div class="grid-container3" id="shows_grid">
     <!-- Favorite shows will be added here by JavaScript -->
 </div>
 
